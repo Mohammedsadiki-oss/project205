@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #111722;
+  color: #fff;
+}
+
+.card-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 45px 16px;
+  background:
+    radial-gradient(ellipse at 50% 0%, #27364b 0%, #151e2c 45%, #101620 100%);
+}
+
+.business-card {
+  width: 100%;
+  max-width: 390px;
+  background: #1c2736;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 23px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+}
+
+/* HEADER */
+
+.card-cover {
+  height: 155px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #293c55, #192638);
+}
+
+.card-logo {
+  color: #d4b77e;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+.cover-label {
+  color: #aab6c5;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  z-index: 1;
+}
+
+.cover-decoration {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(212,183,126,0.2);
+  border-radius: 50%;
+  right: -90px;
+  bottom: -155px;
+}
+
+/* PROFILE */
+
+.profile-section {
+  text-align: center;
+  padding: 0 25px 24px;
+}
+
+.profile-image {
+  width: 112px;
+  height: 112px;
+  margin: -56px auto 18px;
+  position: relative;
+  z-index: 2;
+  border: 4px solid #1c2736;
+  border-radius: 50%;
+  background: #34465e;
+  color: #e0c28a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  overflow: hidden;
+  box-shadow: 0 5px 22px rgba(0,0,0,0.3);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-section h1 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #f5f6f8;
+  margin-bottom: 8px;
+}
+
+.job-title {
+  color: #d4b77e;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.company {
+  color: #a4b0c0;
+  font-size: 13px;
+}
+
+.profile-line {
+  height: 1px;
+  width: 55px;
+  background: #d4b77e;
+  margin: 22px auto 0;
+  opacity: 0.6;
+}
+
+/* CONTACT */
+
+.contact-section {
+  padding: 0 25px;
+  display: grid;
+  gap: 11px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 17px;
+  background: #263345;
+  border: 1px solid rgba(255,255,255,0.055);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #e9edf3;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.contact-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(212,183,126,0.12);
+  color: #d4b77e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+
+.link-arrow {
+  margin-left: auto;
+  color: #d4b77e;
+  font-size: 17px;
+}
+
+.contact-link:hover {
+  background: #304056;
+  border-color: rgba(212,183,126,0.35);
+  transform: translateY(-2px);
+}
+
+/* SOCIAL */
+
+.social-section {
+  text-align: center;
+  padding: 27px 20px 5px;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #9caabe;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #d4b77e;
+  background: #263345;
+  border: 1px solid rgba(212,183,126,0.22);
+  border-radius: 9px;
+  padding: 10px 13px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.social-links a:hover {
+  background: #d4b77e;
+  color: #182332;
+}
+
+/* SAVE CONTACT */
+
+.save-contact {
+  padding: 24px 25px 25px;
+}
+
+.save-contact button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(135deg, #dec795, #c5a66f);
+  color: #172231;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.save-contact button:hover {
+  background: #ebd5a8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212,183,126,0.15);
+}
+
+.save-contact button span {
+  font-size: 19px;
+  margin-right: 5px;
+}
+
+/* FOOTER */
+
+.business-card footer {
+  padding: 17px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  color: #8290a3;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.business-card footer span {
+  color: #d4b77e;
+  font-weight: 800;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+  .card-page {
+    padding: 20px 12px;
+  }
+
+  .business-card {
+    border-radius: 19px;
+  }
+
+  .profile-section h1 {
+    font-size: 23px;
+  }
+}
