@@ -1,0 +1,175 @@
+
+.clients-page {
+  width: 100%;
+  padding: 10px;
+}
+
+.clients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.clients-header h1 {
+  font-size: 27px;
+  color: #172033;
+  margin-bottom: 8px;
+}
+
+.clients-header p {
+  color: #8490a3;
+  font-size: 14px;
+}
+
+.add-client-btn {
+  background: #4169f5;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.clients-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.clients-stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 13px;
+  border: 1px solid #edf0f5;
+}
+
+.clients-stat-card span {
+  color: #8490a3;
+  font-size: 14px;
+}
+
+.clients-stat-card h2 {
+  margin-top: 12px;
+  color: #172033;
+  font-size: 27px;
+}
+
+.clients-table-container {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #edf0f5;
+}
+
+.clients-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.clients-table-header h2 {
+  color: #172033;
+  font-size: 19px;
+}
+
+.clients-table-header input {
+  padding: 11px 14px;
+  border: 1px solid #e2e6ed;
+  border-radius: 8px;
+  outline: none;
+  width: 250px;
+}
+
+.clients-table-header input:focus {
+  border-color: #4169f5;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.clients-table th {
+  background: #f7f8fc;
+  color: #8490a3;
+  font-size: 13px;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.clients-table td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #edf0f5;
+  color: #596579;
+  font-size: 13px;
+}
+
+.client-name {
+  color: #172033 !important;
+  font-weight: 600;
+}
+
+.view-card-link {
+  color: #4169f5;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.view-card-link:hover {
+  text-decoration: underline;
+}
+
+.clients-message {
+  text-align: center;
+  padding: 35px;
+  color: #8490a3;
+}
+
+.clients-message.error {
+  color: #dc3545;
+}
+
+.clients-message button {
+  display: block;
+  margin: 15px auto 0;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #4169f5;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .clients-header,
+  .clients-table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .clients-table-header input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .clients-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .add-client-btn {
+    width: 100%;
+  }
+}

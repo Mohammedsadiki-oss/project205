@@ -74,7 +74,10 @@ function ClientCard() {
 
           <div className="profile-image">
             {client.photo ? (
-              <img src={client.photo} alt={fullName} />
+              <img
+              src={`http://localhost/nfc_project/backend/${client.photo}`}
+              alt={fullName}
+            />
             ) : (
               <span>
                 {(client.nom?.[0] || "") + (client.prenom?.[0] || "")}
