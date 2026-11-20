@@ -1,9 +1,47 @@
 
-import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, Outlet, Navigate } from "react-router-dom";
+import { checkAdminAuth } from "../../services/api";
 import "./AdminLayout.css";
 
 function AdminLayout() {
+
+  const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [admin, setAdmin] = useState(null);
+
+  useEffect(() => {
+
+    const verifySession = async () => {
+      try {
+        const adminData = await checkAdminAuth();
+
+        setAdmin(adminData);
+        setIsAuthenticated(true);
+
+      } catch (error) {
+        console.error("Session verification:", error);
+        setIsAuthenticated(false);
+
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    verifySession();
+
+  }, []);
+
+  // Attendre la verification
+  if (loading) {
+    return <div className="admin-loading">Vérification...</div>;
+  }
+
+  // Redirection si non connecte
+  if (!isAuthenticated) {
+    return <Navigate to="/admin/login" replace />;
+  }
+
   return (
     <div className="admin-layout">
 
@@ -44,7 +82,7 @@ function AdminLayout() {
 
           <div className="admin-profile">
             <span className="admin-avatar">A</span>
-            <span>Administrator</span>
+            <span>{admin?.username || "Administrator"}</span>
           </div>
         </header>
 

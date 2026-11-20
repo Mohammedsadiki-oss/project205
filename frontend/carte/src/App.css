@@ -1,0 +1,68 @@
+
+/* =================================
+   APP CONTAINER
+================================= */
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--beige);
+  color: var(--text-dark);
+}
+
+/* =================================
+   PAGE TRANSITIONS
+================================= */
+
+.app-page {
+  width: 100%;
+  min-height: 100vh;
+  animation: appPageEnter 0.5s ease;
+}
+
+@keyframes appPageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   GENERAL THEME UTILITIES
+================================= */
+
+.theme-green {
+  color: var(--green);
+}
+
+.theme-purple {
+  color: var(--purple);
+}
+
+.theme-beige {
+  background: var(--beige);
+}
+
+.theme-green-bg {
+  background: var(--green-light);
+}
+
+.theme-purple-bg {
+  background: var(--purple-light);
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  .app {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
